@@ -1,7 +1,7 @@
 # Mod1 for Alt and Mod4 for Windows key
 set $mod Mod4
 
-# Home row direction keys, like vim
+# Home row direction keys
 set $left b
 set $down n
 set $up p
@@ -9,6 +9,10 @@ set $right f
 
 # Your preferred terminal emulator
 set $term alacritty
+
+# file manager
+set $file-manager "emacsclient -c -a emacs ~/"
+
 
 output * bg wallpapers/background.jpg fill
 #output * bg #000000 solid_color
@@ -61,12 +65,16 @@ input "*" {
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    # Start the file manager
+    bindsym $mod+d exec $file-manager
+    
     # Kill focused window
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-     set $menu wofi --show=drun --lines=5 --prompt=""
-    bindsym $mod+d exec $menu
+    set $menu wofi --show=drun --lines=5 --prompt=""
+    
+    bindsym $mod+m exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
