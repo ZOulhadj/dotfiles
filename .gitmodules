@@ -1,4 +1,0 @@
-[submodule "emacs"]
-	path = emacs
-	url = https://github.com/ZOulhadj/emacs.git
-	branch = main
