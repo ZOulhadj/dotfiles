@@ -14,3 +14,4 @@ compinit
 PROMPT='%F{blue}%B%~%b%f > '
 export MOZ_ENABLE_WAYLAND=1
 alias dotfiles='/usr/bin/git --git-dir=/home/zakariya/.dotfiles --work-tree=/home/zakariya'
+alias emacs-restart='systemctl --user restart emacs.service'
