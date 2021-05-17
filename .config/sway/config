@@ -36,10 +36,14 @@ input "*" {
       xkb_options ctrl:swapcaps
 }
 
+input type:pointer {
+      accel_profile flat
+}
+
 # Trackpad
 input "2:7:SynPS/2_Synaptics_TouchPad" {
-      dwt enabled
-      tap enabled
+      dwt disabled
+      tap disabled
       natural_scroll disabled
       middle_emulation enabled
 }
@@ -177,6 +181,8 @@ bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
 # Set screen brightness
 bindsym XF86MonBrightnessDown exec "brightnessctl set 5%-"
 bindsym XF86MonBrightnessUp exec "brightnessctl set +5%"
+
+focus_follows_mouse no
 
 # run menu bar
 exec waybar
