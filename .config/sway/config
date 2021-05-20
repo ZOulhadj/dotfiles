@@ -18,7 +18,7 @@ set $file-manager "emacsclient -c -a emacs ~/"
 set $text-editor "emacsclient -c -a emacs"
 
 # Wallpaper
-output * bg wallpapers/background.jpg fill
+output * bg wallpapers/background2.jpg fill
 
 
 default_border pixel
