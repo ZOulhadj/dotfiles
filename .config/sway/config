@@ -197,5 +197,5 @@ exec gammastep
 exec mako
 
 # run other programs
-exec discord
-exec slack
+#exec discord
+#exec slack
