@@ -9,10 +9,10 @@ set $right f
 
 # Terminal
 set $term alacritty
-#set $term "emacsclient -c -a emacs -f shell"
+#set $term "emacsclient -c -a emacs -e '()"
 
 # File manager
-set $file-manager "emacsclient -c -a emacs ~/"
+set $file-manager "emacsclient -c -a emacs $HOME"
 
 # Text editor
 set $text-editor "emacsclient -c -a emacs"
