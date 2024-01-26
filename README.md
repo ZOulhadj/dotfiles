@@ -1,11 +1,15 @@
 # Dotfiles
+These are my Linux dotfiles managed by [GNU Stow](https://www.gnu.org/software/stow/)
 
+# Running
+A makefile is provided that allows for all configurations to be installed or removed using `make` or `make delete` respectively.
 
 # Applications
 
 ## Internet
 - Firefox
 - Discord
+- TeamViewer
 
 ## Programming
 - Emacs
@@ -28,8 +32,14 @@
 - Google Earth
 - BitWarden
 - Blender
-
 - VirtualBox
-- Teamviewer
+
 - LibreOffice
 - CPU-X
+
+## CLI Tools
+- stow
+- make
+- gcc
+- htop
+- zsh
