@@ -43,3 +43,5 @@ A makefile is provided that allows for all configurations to be installed or rem
 - gcc
 - htop
 - zsh
+- i3blocks
+- lm-sensors
