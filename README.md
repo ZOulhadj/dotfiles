@@ -6,6 +6,20 @@ A makefile is provided that allows for all configurations to be installed or rem
 
 # Applications
 
+## CLI Tools
+- i3-wm
+- i3lock
+- i3blocks
+- alacritty (Terminal)
+- stow
+- make
+- gcc
+- htop
+- zsh
+- lm-sensors
+- dunst (Notification Daemon)
+
+
 ## Internet
 - Firefox
 - Discord
@@ -36,12 +50,3 @@ A makefile is provided that allows for all configurations to be installed or rem
 
 - LibreOffice
 - CPU-X
-
-## CLI Tools
-- stow
-- make
-- gcc
-- htop
-- zsh
-- i3blocks
-- lm-sensors
