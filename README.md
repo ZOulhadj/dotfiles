@@ -6,19 +6,24 @@ A makefile is provided that allows for all configurations to be installed or rem
 
 # Applications
 
-## CLI Tools
+## i3 (Window Manager)
 - i3-wm
 - i3lock
 - i3blocks
+- rofi (Application Launcher)
+- dunst (Notification Daemon)
+- lm-sensors
+
+# Terminal
 - alacritty (Terminal)
+- zsh
+
+## CLI Tools
 - stow
 - make
 - gcc
 - htop
-- zsh
-- lm-sensors
-- dunst (Notification Daemon)
-
+- neofetch
 
 ## Internet
 - Firefox
