@@ -12,3 +12,5 @@ compinit
 # End of lines added by compinstall
 
 PS1='%n@%m %~$ '
+
+alias ls="ls -alhG --color=auto"
