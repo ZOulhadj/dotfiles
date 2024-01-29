@@ -13,4 +13,4 @@ compinit
 
 PS1='%n@%m %~$ '
 
-alias ls="ls -alhG --color=auto"
+alias ls="ls --color=auto"

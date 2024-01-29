@@ -15,7 +15,7 @@ A makefile is provided that allows for all configurations to be installed or rem
 - lm-sensors
 
 # Terminal
-- alacritty (Terminal)
+- Kitty (Terminal)
 - zsh
 
 ## CLI Tools
