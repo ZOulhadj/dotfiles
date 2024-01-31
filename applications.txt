@@ -1,48 +1,63 @@
-## i3 (Window Manager)
-- i3-wm
-- i3lock
-- i3blocks
-- rofi (Application Launcher)
-- dunst (Notification Daemon)
-- lm-sensors
+# base packages
+- grub
+- efibootmgr
+- amd-ucode
+- sof-firmware
+- sudo
+- Network Manager
 
-# Terminal
-- Kitty (Terminal)
-- zsh
-
-## CLI Tools
+# utilities
 - stow
+- git
+- zsh
 - make
 - gcc
 - htop
 - neofetch
+- mako (Notifications)
+- base-devel
+- man-db
+- man-pages
+- texinfo
+- xorg-xwayland
+- brightnessctl
+- playerctl
+- pavucontrol
+- yay (AUR Helper)
 
-## Internet
-- Firefox
-- Discord
-- TeamViewer
+- ttf-cascadia-code
+- ttf-ubuntu-font-family
+- ttf-hack
+- ttf-inconsolata
+- noto-fonts-ckj
 
-## Programming
-- Emacs
-- VSCode
+- lm-sensors
 
-## Multimedia
-- Audacity
-- VLC
-- Plex
-- OBS Studio
-- DaVinci Resolve
+# applications
+- firefox (Browser)
+- discord 
+- teamviewer
+- emacs (Editor)
+- nano
+- audacity
+- vlc
+- plex
+- obs-studio
+- davinci resolve
+- qbittorrent
+- steam
+- google-earth
+- bitwarden
+- blender
+- virtualbox
+- libreoffice
+- cpu-x
+- kitty (Terminal)
+- sway
+- swaylock
+- swayidle
+- swaybg
+- sway-auto-idle-inhibit
 
-## Games
-- Steam
 
-## Downloading
-- qBitTorrent
 
-## Other
-- Google Earth
-- BitWarden
-- Blender
-- VirtualBox
-- LibreOffice
-- CPU-X
