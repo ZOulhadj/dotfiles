@@ -14,3 +14,5 @@ compinit
 PS1='%n@%m %~$ '
 
 alias ls="ls --color=auto"
+
+export GPG_TTY=$(tty)
