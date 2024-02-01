@@ -30,6 +30,7 @@
 - ttf-hack
 - ttf-inconsolata
 - noto-fonts-ckj
+- otf-font-awesome
 
 - lm-sensors
 
@@ -58,6 +59,8 @@
 - swayidle
 - swaybg
 - sway-auto-idle-inhibit
+- waybar
+
 
 
 

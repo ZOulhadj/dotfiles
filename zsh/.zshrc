@@ -13,7 +13,7 @@ compinit
 
 PS1='%n@%m %~$ '
 
-export GPG_TTY=$(tty)
-
 alias ls="ls --color=auto"
 alias screen="swaymsg output eDP-1 toggle"
+
+
