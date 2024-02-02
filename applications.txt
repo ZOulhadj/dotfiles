@@ -32,7 +32,11 @@
 - noto-fonts-ckj
 - otf-font-awesome
 
-- lm-sensors
+- qt6-wayland (OBS Screen recording support)
+- pipewire
+- xdg-desktop-portal
+- xdg-desktop-portal-wrl
+- xdg-user-dirs (Home folders)
 
 # applications
 - firefox (Browser)
@@ -60,7 +64,7 @@
 - swaybg
 - sway-auto-idle-inhibit
 - waybar
-
-
+- mpv
+- qpwgraph (Qt Pipewire Visualiser)
 
 
