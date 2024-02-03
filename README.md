@@ -12,3 +12,8 @@ system to find the various configurations. To undo all the symbolic links, run
 
 # Software
 All packages that I install can be found in ``applications.txt``.
+
+# Useful commands
+
+- List explicity installed packages from the official repository ``pacman -Qe``
+- List explicity installed packages from both official and AUR repository ``yay -Qe``

@@ -1,18 +1,26 @@
 include /etc/sway/config.d/*
 
+# Variables
 set $mod Mod4
 set $term kitty
 set $menu rofi -show drun -show-icons | xargs swaymsg exec
 set $lock swaylock -f -c 000000
+set $laptop eDP-1
 
-font pango:Cascadia Mono 12
+# Monitor setup
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
 
+# Options
+font pango:Inconsolata Bold 12
 focus_follows_mouse yes 
 mouse_warping output
 smart_borders on
 default_border normal
 workspace_auto_back_and_forth no
+output "*" bg wallpaper.png fill
 
+# Keyboard and Mouse
 input * {
 	xkb_layout "gb"
 }
@@ -25,27 +33,9 @@ input type:touchpad {
 	natural_scroll disabled
 }
 
-output "*" bg wallpaper.png fill
-
-# locking
-exec swayidle -w \
-	timeout 300 $lock \
-	timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-	before-sleep 'playerctl pause' \
-	before-sleep $lock
-
 bindsym $mod+Shift+Ctrl+l exec $lock
 
-# Enables inhibit_idle when playing audio
-exec sway-audio-idle-inhibit
-
-exec mako
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-# Use pactl to adjust volume in PulseAudio.
+# Multimedia keys
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -125,10 +115,10 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Firefox"
-set $ws2 "2: Emacs"
-set $ws3 "3"
-set $ws4 "4"
+set $ws1 "1: Internet"
+set $ws2 "2: Editor"
+set $ws3 "3: Terminal"
+set $ws4 "4: Social"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -160,9 +150,6 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-#assign [class="firefox" instance="Navigator"] $ws1 
-#assign [class="discord" instance="discord"] $ws3
-#assign [class="steamwebhelper" instance="steam"] $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -216,6 +203,32 @@ bar {
 	}
 }
 
-exec --no-startup-id /usr/lib/xdg-desktop-portal -r
+# Any application using xwayland should say so in the title
 for_window [shell="xwayland"] title_format "[XWayland] %title"
 
+# Applications should open to specific workspaces
+assign [class="firefox" instance="Navigator"] $ws1
+assign [class="Emacs" instance="emacs"] $ws2
+assign [class="kitty"] $ws3
+assign [class="discord" instance="discord"] $ws4
+assign [class="steam"] $ws5
+
+# Auto launch applications
+# TODO: Currently not working as expected
+exec swaymsg "$w1; exec /usr/bin/firefox"
+exec swaymsg "$w2; exec /usr/bin/emacs"
+exec swaymsg "$w3; exec /usr/bin/kitty"
+exec swaymsg "$w4; exec /usr/bin/discord"
+
+exec /usr/lib/xdg-desktop-portal -r
+
+# locking
+exec swayidle -w \
+	timeout 300 $lock \
+	timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+	before-sleep 'playerctl pause' \
+	before-sleep $lock
+
+# Enables inhibit_idle when playing audio
+exec sway-audio-idle-inhibit
+exec mako

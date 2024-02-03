@@ -2,6 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "Ubuntu", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 15px;
+    transition: none;
 }
 
 window#waybar {
