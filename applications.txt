@@ -75,3 +75,4 @@
 - mpv
 - nautilus (File Manager)
 - synology drive
+- npm
