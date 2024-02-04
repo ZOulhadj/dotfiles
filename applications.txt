@@ -25,6 +25,7 @@
 - playerctl
 - pavucontrol
 - yay (AUR Helper)
+- tlp (Battery care)
 
 - ttf-cascadia-code
 - ttf-ubuntu-font-family
