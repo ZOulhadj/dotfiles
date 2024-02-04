@@ -39,8 +39,7 @@ All packages that I install can be found in ``applications.txt``.
 - [ ] Package install script
 - [ ] Package configuration script
 - [X] User dotfiles
-
-- [ ] Prebuilt ISO via archiso
+- [ ] Prebuilt ISO via [archiso](https://wiki.archlinux.org/title/Archiso)
 
 One of my goals is to package everything into a prebuilt Arch ISO
 file. This would allow me to install the system with everything preconfigured.
