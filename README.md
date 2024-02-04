@@ -31,8 +31,8 @@ All packages that I install can be found in ``applications.txt``.
 
 # Useful commands
 
-- List explicity installed packages from the official repository ``pacman -Qe``
-- List explicity installed packages from both official and AUR repository ``yay -Qe``
+- Packages installed from official repository ``pacman -Qe``
+- Packages installed from AUR repository ``pacman -Qem``
 
 # Tasks
 - [ ] Linux Arch base install script
