@@ -14,6 +14,5 @@ compinit
 PS1='%n@%m %~$ '
 
 alias ls="ls --color=auto"
-alias screen="swaymsg output eDP-1 toggle"
-
+alias grep="grep --color=auto"
 
