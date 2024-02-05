@@ -25,6 +25,8 @@ All packages that I install can be found in ``applications.txt``.
 - Obtain latest hardware drivers via fwupd
 - Configure TLP config for battery thresholds ``/etc/tlp.conf``
 - Create user accounts and add to required groups (wheel)
+- Unmute ALSA channels via alsamixer provided by ``alsa-utils``
+- Enable fstrim timer service to automatically trim SSD via ``util-linux``
 
 ### User configuration
 - Initialize Git system config

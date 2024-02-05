@@ -44,6 +44,8 @@
 - cifs-utils (Samba)
 - gvfs-smb (Samba)
 - fwupd (Driver updating)
+- util-linux (fstrim SSD trimming)
+- alsa-utils
 
 # applications
 - firefox (Browser)
