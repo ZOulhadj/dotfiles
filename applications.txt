@@ -78,3 +78,4 @@
 - nautilus (File Manager)
 - synology drive
 - npm
+- systemdgenie (Systemd GUI Manager)
