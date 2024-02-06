@@ -52,7 +52,7 @@
 - firefox (Browser)
 - discord 
 - teamviewer
-- emacs (Editor)
+- emacs-wayland (Editor)
 - audacity
 - vlc
 - plex
