@@ -8,7 +8,8 @@
 - sof-firmware
 - sudo
 - Network Manager
--
+- nano
+
 # utilities
 - stow
 - git
@@ -52,7 +53,6 @@
 - discord 
 - teamviewer
 - emacs (Editor)
-- nano
 - audacity
 - vlc
 - plex

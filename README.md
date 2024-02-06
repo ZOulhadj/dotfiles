@@ -22,7 +22,7 @@ Arch system.
 ### System Installation/Configuration
 - Update system clock ``timedatectl``
 - Parition system (EFI, Root, Swapfile)
-- Install core system packages ``pacstrap -K /mnt base linux linux-firmware``
+- Install core system packages ``pacstrap -K /mnt base linux linux-firmware grub efibootmgr amd-ucode sudo networkmanager nano``
 - Generate fstab file ``genfstab -U /mnt >> /mnt/etc/fstab``
 - Chroot into new system ``arch-chroot /mnt``
 
