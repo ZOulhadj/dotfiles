@@ -16,19 +16,42 @@ configurations. To undo all the symbolic links, run ``make delete``.
 All packages that I install can be found in ``applications.txt``.
 
 ## Setup
+A general list of the main steps that need to be performed when setting up the
+Arch system.
 
-### System-wide configuration
+### System Installation/Configuration
+- Update system clock ``timedatectl``
+- Parition system (EFI, Root, Swapfile)
+- Install core system packages ``pacstrap -K /mnt base linux linux-firmware``
+- Generate fstab file ``genfstab -U /mnt >> /mnt/etc/fstab``
+- Chroot into new system ``arch-chroot /mnt``
+
+- Set timezone ``ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime``
+- Run ``hwclock --systohc`` to create ``/etc/adjtime``
+- Edit ``/etc/locale.gen`` and uncomment desired locales and then run ``locale-gen``
+- Create ``/etc/locale.conf`` and set LANG variable ``LANG=en_GB.UTF-8``
+- Set vconsole keymap ``/etc/vconsole.conf`` to ``KEYMAP=uk``
+- Create hostname file ``/etc/hostname/`` and set desired system name
+- Edit hosts file ``/etc/hosts/``
 - Enable sudo for users in the wheel group
 - start/enable Network Manager service
 - Enable pacman multilib ``/etc/pacman.conf`` (32 bit application repository)
 - Enable pacman terminal colors ``/etc/pacman.conf``
 - Obtain latest hardware drivers via fwupd
 - Configure TLP config for battery thresholds ``/etc/tlp.conf``
-- Create user accounts and add to required groups (wheel)
+
 - Unmute ALSA channels via alsamixer provided by ``alsa-utils``
 - Enable fstrim timer service to automatically trim SSD via ``util-linux``
+- Set root password ``passwd``
+- Create user accounts, set passwords and add to required groups (wheel)
+- Install GRUB bootloaded
+- Install CPU microcode
 
-### User configuration
+### Post-installation
+- Install application
+- Clone dotfiles repository
+- Create symbolic links for dotfiles
+
 - Initialize Git system config
 
 # Useful commands
