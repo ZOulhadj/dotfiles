@@ -33,7 +33,7 @@ All packages that I install can be found in ``applications.txt``.
 
 # Useful commands
 
-- Packages installed from official repository ``pacman -Qe``
+- Packages installed from all repositories ``pacman -Qe``
 - Packages installed from AUR repository ``pacman -Qem``
 
 # Tasks
