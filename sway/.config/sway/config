@@ -18,7 +18,7 @@ mouse_warping output
 smart_borders on
 default_border normal
 workspace_auto_back_and_forth no
-output "*" bg wallpaper.png fill
+output "*" bg wallpaper1.png fill
 focus_on_window_activation focus
 #gaps inner 8
 
