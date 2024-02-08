@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Ubuntu", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Cascadia Code", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 15px;
     transition: none;
 }
@@ -87,7 +87,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 10px;
+    padding: 0 4px;
     color: #ffffff;
 }
 
@@ -111,16 +111,15 @@ button:hover {
 }
 
 #clock {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #battery {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 @keyframes blink {
@@ -146,23 +145,23 @@ label:focus {
 }
 
 #cpu {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #memory {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #disk {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #backlight {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #network {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #network.disconnected {
@@ -170,19 +169,19 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #pulseaudio.muted {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #wireplumber {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #custom-media {
@@ -200,7 +199,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #000;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #temperature.critical {
@@ -208,7 +207,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #tray > .passive {
@@ -221,7 +220,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background: rgba(0.0, 0.0, 0.0, 0.0);
 }
 
 #idle_inhibitor.activated {
