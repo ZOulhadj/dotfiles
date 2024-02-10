@@ -1,3 +1,5 @@
+# Script to install user dotiles and applications.
+
 # Script arguments:
 # -h  or --help      (Print help menu)
 # -nc or --noconfirm (Dont ask user for confirmation after every command)

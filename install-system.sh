@@ -1,1 +1,1 @@
-# Script to install the base Arch linux system
+# Script to install the base Arch linux system.
