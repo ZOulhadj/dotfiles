@@ -1,4 +1,6 @@
-# base packages
+# Applications
+
+## core
 - base
 - linux
 - linux-firmware
@@ -10,7 +12,7 @@
 - Network Manager
 - nano
 
-# utilities
+## utilities
 - stow
 - git
 - gdb
@@ -52,7 +54,7 @@
 - util-linux (fstrim SSD trimming)
 - alsa-utils
 
-# applications
+## applications
 - firefox (Browser)
 - discord 
 - teamviewer
