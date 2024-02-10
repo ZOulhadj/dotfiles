@@ -34,6 +34,7 @@
 - ttf-hack
 - ttf-inconsolata
 - noto-fonts-ckj
+- noto-fonts-emoji
 - otf-font-awesome
 
 - qt6-wayland (OBS Screen recording support)
@@ -54,9 +55,10 @@
 - discord 
 - teamviewer
 - emacs-wayland (Editor)
+- visual-studio-code-bin
 - audacity
 - vlc
-- plex
+- plex-media-player
 - obs-studio
 - kden-live
 - qbittorrent
@@ -80,3 +82,4 @@
 - synology drive
 - npm
 - systemdgenie (Systemd GUI Manager)
+- gnome-firmware (View and upgrade system firmware & has fwupd support built-in)
