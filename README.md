@@ -14,6 +14,10 @@ this is that it allows for all the dotfiles to be located within the same folder
 under version control whilst still allowing a system to find the various
 configurations. To undo all the symbolic links, run ``make delete``.
 
+## Installing
+1. ``install-system.sh`` - Installs the base Linux Arch system
+2. ``install-user.sh`` - Installs dotfiles and applications.
+
 ## Software
 All packages that I install can be found in ``applications.txt``.
 
