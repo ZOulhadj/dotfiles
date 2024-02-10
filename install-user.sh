@@ -30,7 +30,6 @@ apps_official=(
 
     # programming
     emacs-wayland
-    visual-studio-code-bin
     npm
 
     # tools
@@ -52,14 +51,20 @@ apps_official=(
 
 # Applications from the AUR (Arch User-Repository)
 apps_community=(
-    google-earth-pro
-    cpu-x
+    # multimedia
     minecraft-launcher
+    google-earth-pro
     plex-media-player
+    
+    # programming
+    visual-studio-code-bin
+    
+    # tools
+    cpu-x
     sway-auto-idle-inhibit
     synology-drive
     teamviewer
-    visual-studio-code-bin
+    
 )
 
 #read -p "Are you sure you want to proceed? (y/n): " confirmation
