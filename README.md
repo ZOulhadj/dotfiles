@@ -54,6 +54,16 @@ Arch system.
 
 - Initialize Git system config
 
+### Bug fixes
+- Add ``amdgpu.dcdebugmask=0x10`` to ``GRUB_CMDLINE_LINUX_DEFAULT`` in
+  ``/etc/default/grub`` and then run ``sudo grub-mkconfig -o
+  /boot/grub/grub.cfg`` to update grub.
+
+  **Reason**: My laptop is a Thinkpad T14s Gen 3 AMD which crashes after waking
+  from sleep. This can be fixed by disabling PSR (Panel Self Refresh). This is a
+  regression issue with kernel 5.19 [bug
+  report](https://bugs.launchpad.net/ubuntu/+source/linux-hwe-5.19/+bug/2007718)
+
 # Useful commands
 
 - Packages installed from all repositories ``pacman -Qe``
