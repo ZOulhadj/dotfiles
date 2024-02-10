@@ -1,4 +1,8 @@
 # Script to install user dotiles and applications.
+# - Install applications
+# - Clone dotfiles repository
+# - Create symbolic links for dotfiles
+# - Initialize Git system config
 
 # Script arguments:
 # -h  or --help      (Print help menu)
