@@ -1,5 +1,7 @@
 # Dotfiles
 
+**This repository is work in progress and is not guaranteed to work.**
+
 The goal of this repository is for me to be able to have a custom, efficient and
 reproducible system that can be easily installed.
 
