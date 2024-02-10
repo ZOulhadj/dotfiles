@@ -21,11 +21,11 @@ All packages that I install can be found in ``applications.md``.
 1. ``install-system.sh`` - Installs the base Linux Arch system
 2. ``install-user.sh`` - Installs dotfiles and applications.
 
-# Useful commands
+## Useful commands
 - Packages installed from all repositories ``pacman -Qe``
 - Packages installed from AUR repository ``pacman -Qem``
 
-# Tasks
+## Tasks
 - [ ] Linux Arch base install script
 - [ ] Package install script
 - [ ] Package configuration script
