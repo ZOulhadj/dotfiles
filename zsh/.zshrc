@@ -22,4 +22,4 @@ alias grep="grep --color=auto"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-bindkey '^I' autosuggest-accept
+#bindkey '^I' autosuggest-accept
