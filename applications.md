@@ -71,6 +71,7 @@
 - bitwarden
 - blender
 - virtualbox
+- virtualbox-host-modules-arch (Kernel module required by virtualbox)
 - libreoffice
 - cpu-x
 - kitty (Terminal)

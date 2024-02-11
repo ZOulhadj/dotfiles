@@ -46,6 +46,7 @@ apps_official=(
     kitty
     qbittorrent
     virtualbox
+    virtualbox-host-modules-arch
 
     # window manager
     sway

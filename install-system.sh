@@ -1,12 +1,134 @@
+#!/bin/bash
+
 # Script to install the base Arch linux system.
 
+# Simple Arch Linux Installation Script
+# Script assumes that you are running the live arch environment and connected to
+# the internet
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root"
+   exit 1
+fi
+
+# hostname=arch
+# keymap=uk
+# lang=en_GB.UTF-8
+
+read -p "Enter hostname: (e.g., arch): " hostname
+
+# Update system clock
+# timedatectl
+
+# Partition and make filesystems (EFI, Root, Swapfile)
+lsblk
+read -p "Enter drive for installation: (e.g., /dev/sda): " drive
+# fdisk /dev/sda << EOF
+# g                # create new empty GPT partition table
+
+# Create EFI System partition
+# n                # add a new partition
+# 1                # select first partition
+# insert enter key # confirm default partition offset (2048)
+# +512M            # set partition size
+# t                # set partition type
+# 1                # set partition type to EFI System
+
+# Create Linux filesystem partition
+# n                # add a new partition
+# 2                # select second partition
+# insert enter key # confirm partition number
+# insert enter key # confirm default partition offset
+# insert enter key # confirm default partition size (remaining size)
+# t                # set partition type
+# 2                # set partition number
+# 20               # set partition type to Linux filesystem
+
+# Write partition table to selected disk
+# w
+
+# Format partitions
+# mkfs.fat -F 32 /dev/sda1
+# mkfs.ext4 /dev/sda2
+
+# Mount the root partition
+# mount /dev/sda2 /mnt
+
+# create EFI mount point and mount partition
+# mount --mkdir /dev/sda1 /mnt/boot
+
+# Create swapfile
+# dd if=/dev/zero of=/mnt/swapfile bs=1M count=8k status=progress (8GB)
+# chmod 0600 /mnt/swapfile
+# mkswap -U clear /mnt/swapfile
+# swapon /mnt/swapfile
+
+# Install base system
+# pacstrap -K /mnt <core applications>
+
+# Generate fstab
+# genfstab -U /mnt >> /mnt/etc/fstab
+
+
+
+# Change root into the new system
+# arch-chroot /mnt
+
+
+# # Install and configure bootloader (GRUB)
+# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+# grub-mkconfig -o /boot/grub/grub.cfg
+
+# Set timezone
+# ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
+# hwclock --systohc
+
+# Set locale
+# echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+# locale-gen
+# echo "LANG=en_US.UTF-8" > /etc/locale.conf
+# echo "KEYMAP=uk" > /etc/vconsole.conf
+
+# Set hostname
+# echo $hostname > /etc/hostname
+
+# # Set hosts file
+# echo "127.0.0.1     localhost" >> /etc/hosts
+# echo "::1           localhost" >> /etc/hosts
+# echo "127.0.1.1     $hostname.localdomain $hostname" >> /etc/hosts
+
+# Create symbolic link for Network Manager so it starts at boot
+# systemctl enable NetworkManager
+
+# Set root password
+# passwd
+
+# Perform post install stuff (users, pacman multilib and colors, TLP, SSD trim, NTP accurate clock, unmute audio)
+
+# # Exit chroot
+# exit
+
+# echo "Installation complete. You can now reboot the system."
+# Sleep for 10 seconds so user can read message that installation is complete
+
+# reboot
+
+
+
+
+
+
+########################################
+# Temp notes
+
 # - Update system clock ``timedatectl``
-# - Parition system (EFI, Root, Swapfile)
+# - Setup NTP service to not have clock drift
 # - Install core packages [1](./applications.md#core) ``pacstrap -K /mnt base linux linux-firmware grub efibootmgr sudo networkmanager nano``
 # - Generate fstab file ``genfstab -U /mnt >> /mnt/etc/fstab``
 # - Chroot into new system ``arch-chroot /mnt``
 # - Set timezone ``ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime``
 # - Run ``hwclock --systohc`` to create ``/etc/adjtime``
+
 # - Edit ``/etc/locale.gen`` and uncomment desired locales and then run ``locale-gen``
 # - Create ``/etc/locale.conf`` and set LANG variable ``LANG=en_GB.UTF-8``
 # - Set vconsole keymap ``/etc/vconsole.conf`` to ``KEYMAP=uk``
@@ -26,7 +148,7 @@
 #   ``useradd -m -G wheel -s /usr/bin/zsh zakariya``
 #   ``passwd zakariya``
 # - Install GRUB bootloader
-# - Install CPU microcode ``pacman -S amd-ucode`` 
+# - Install CPU microcode ``pacman -S amd-ucode``
 #   Installing this package should automatically call grub-mkconfig so that the
 #   microcode gets loaded at boot.
 
