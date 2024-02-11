@@ -16,6 +16,8 @@ fi
 # lang=en_GB.UTF-8
 
 read -p "Enter hostname: (e.g., arch): " hostname
+read -p "Enter keyboard keymap: (e.g., uk): " hostname
+
 
 # Update system clock
 # timedatectl
@@ -103,7 +105,7 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 # Set root password
 # passwd
 
-# Perform post install stuff (users, pacman multilib and colors, TLP, SSD trim, NTP accurate clock, unmute audio)
+# Perform post install stuff (users, pacman multilib and colors, TLP, SSD trim, unmute audio)
 
 # # Exit chroot
 # exit
@@ -122,7 +124,6 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 # Temp notes
 
 # - Update system clock ``timedatectl``
-# - Setup NTP service to not have clock drift
 # - Install core packages [1](./applications.md#core) ``pacstrap -K /mnt base linux linux-firmware grub efibootmgr sudo networkmanager nano``
 # - Generate fstab file ``genfstab -U /mnt >> /mnt/etc/fstab``
 # - Chroot into new system ``arch-chroot /mnt``
@@ -143,6 +144,7 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 # - Configure TLP config for battery thresholds ``/etc/tlp.conf``
 # - Unmute ALSA channels via alsamixer provided by ``alsa-utils``
 # - Enable fstrim timer service to automatically trim SSD via ``util-linux``
+# - Set NTP ``timedatectl set-ntp true``
 # - Set root password ``passwd``
 # - Create user accounts, set passwords and add to required groups
 #   ``useradd -m -G wheel -s /usr/bin/zsh zakariya``
