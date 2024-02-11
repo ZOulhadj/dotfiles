@@ -48,6 +48,7 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 
 # Write partition table to selected disk
 # w
+# EOF
 
 # Format partitions
 # mkfs.fat -F 32 /dev/sda1
