@@ -13,7 +13,7 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 # Options
 font pango:Inconsolata Bold 12
-focus_follows_mouse yes 
+focus_follows_mouse yes
 mouse_warping output
 smart_borders on
 default_border normal
@@ -24,15 +24,15 @@ focus_on_window_activation focus
 
 # Keyboard and Mouse
 input * {
-	xkb_layout "gb"
+        xkb_layout "gb"
 }
 
 input type:keyboard {
-	xkb_options ctrl:swapcaps
+        #xkb_options ctrl:swapcaps
 }
 
 input type:touchpad {
-	natural_scroll disabled
+        natural_scroll disabled
 }
 
 bindsym $mod+Shift+Ctrl+l exec $lock
@@ -56,7 +56,7 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 # tiling_drag modifier titlebar
 
-# start a terminal 
+# start a terminal
 bindsym $mod+Return exec $term
 
 # kill focused window
@@ -197,12 +197,12 @@ bindsym $mod+r mode "resize"
 bindsym $mod+x mode "$mode_system"
 
 bar {
-	swaybar_command waybar
-	colors {
-		statusline #ffffff
-		background #323232
-		inactive_workspace #32323200 #32323200 #5c5c5c
-	}
+        swaybar_command waybar
+        colors {
+                statusline #ffffff
+                background #323232
+                inactive_workspace #32323200 #32323200 #5c5c5c
+        }
 }
 
 # Any application using xwayland should say so in the title
@@ -227,10 +227,10 @@ exec /usr/lib/xdg-desktop-portal -r
 
 # locking
 exec swayidle -w \
-	timeout 300 $lock \
-	timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-	before-sleep 'playerctl pause' \
-	before-sleep $lock
+        timeout 300 $lock \
+        timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+        before-sleep 'playerctl pause' \
+        before-sleep $lock
 
 # Enables inhibit_idle when playing audio
 exec sway-audio-idle-inhibit
