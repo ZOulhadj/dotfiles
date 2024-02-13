@@ -33,6 +33,7 @@ input "10730:258:Kinesis_Advantage2_Keyboard" {
 
 input "1:1:AT_Translated_Set_2_keyboard" {
         xkb_options ctrl:swapcaps
+        #xkb_variant colemak
 }
 
 input type:touchpad {
