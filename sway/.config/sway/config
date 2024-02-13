@@ -6,6 +6,7 @@ set $term kitty
 set $menu rofi -show drun -show-icons | xargs swaymsg exec
 set $lock swaylock -f -c 000000
 set $laptop eDP-1
+set $screenshot_region exec grim -g "$(slurp)" - | wl-copy -t image/png
 
 # Monitor setup
 bindswitch --reload --locked lid:on output $laptop disable
@@ -243,6 +244,5 @@ exec swayidle -w \
 exec sway-audio-idle-inhibit
 exec mako
 
-
-bindsym $mod+s exec grim -g "$(slurp)" - | wl-copy -t image/png
-bindsym Print exec grim -g "$(slurp)" - | wl-copy -t image/png
+bindsym $mod+s $screenshot_region
+bindsym Print $screenshot_region
