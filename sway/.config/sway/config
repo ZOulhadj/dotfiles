@@ -27,12 +27,17 @@ input * {
         xkb_layout "gb"
 }
 
-input type:keyboard {
-        #xkb_options ctrl:swapcaps
+input "10730:258:Kinesis_Advantage2_Keyboard" {
+
+}
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+        xkb_options ctrl:swapcaps
 }
 
 input type:touchpad {
-        natural_scroll disabled
+        natural_scroll enabled
+        scroll_factor 0.25
 }
 
 bindsym $mod+Shift+Ctrl+l exec $lock
