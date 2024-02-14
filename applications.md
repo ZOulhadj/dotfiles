@@ -16,6 +16,7 @@
 - stow
 - git
 - gdb
+- ripgrep
 - zsh
 - zsh-syntax-highlighting
 - zsh-autosuggestions
@@ -60,7 +61,7 @@
 
 ## applications
 - firefox (Browser)
-- discord 
+- discord
 - teamviewer
 - emacs-wayland (Editor)
 - visual-studio-code-bin
