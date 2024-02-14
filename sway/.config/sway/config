@@ -12,6 +12,10 @@ set $screenshot_region exec grim -g "$(slurp)" - | wl-copy -t image/png
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
+output $laptop {
+       scale 1.0
+}
+
 # Options
 font pango:Inconsolata Bold 12
 focus_follows_mouse yes
@@ -26,15 +30,12 @@ focus_on_window_activation focus
 # Keyboard and Mouse
 input * {
         xkb_layout "gb"
+        xkb_options ctrl:swapcaps
+        #xkb_variant colemak
 }
 
 input "10730:258:Kinesis_Advantage2_Keyboard" {
 
-}
-
-input "1:1:AT_Translated_Set_2_keyboard" {
-        xkb_options ctrl:swapcaps
-        #xkb_variant colemak
 }
 
 input type:touchpad {
