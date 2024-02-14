@@ -58,6 +58,7 @@
 - grim (Screenshot)
 - slurp (Selects a region in a Wayland compositor)
 - wl-clipboard (Wayland clipboard)
+- timeshift (Backups)
 
 ## applications
 - firefox (Browser)
