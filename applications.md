@@ -38,6 +38,7 @@
 - ttf-ubuntu-font-family
 - ttf-hack
 - ttf-inconsolata
+- noto-fonts
 - noto-fonts-ckj
 - noto-fonts-emoji
 - otf-font-awesome
