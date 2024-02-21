@@ -17,6 +17,9 @@
 - git
 - gdb
 - ripgrep
+- imagemagick (Image to used by Emacs)
+- aspell
+- aspell-en (English Dictionary)
 - zsh
 - zsh-syntax-highlighting
 - zsh-autosuggestions

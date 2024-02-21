@@ -21,21 +21,29 @@ font pango:Inconsolata Bold 12
 focus_follows_mouse yes
 mouse_warping output
 smart_borders on
-default_border normal
+default_border pixel
 workspace_auto_back_and_forth no
 output "*" bg wallpaper1.png fill
 focus_on_window_activation focus
 #gaps inner 8
 
+input type:keyboard {
+       xkb_layout "gb"
+       xkb_options ctrl:swapcaps
+       #xkb_variant "colemak_dh"
+}
+
 # Keyboard and Mouse
-input * {
+input "1:1:AT_Translated_Set_2_keyboard" {
         xkb_layout "gb"
         xkb_options ctrl:swapcaps
-        #xkb_variant colemak
+        #xkb_variant "colemak_dh"
 }
 
 input "10730:258:Kinesis_Advantage2_Keyboard" {
-
+        xkb_layout "gb"
+        #xkb_options ctrl:swapcaps
+        #xkb_variant "colemak_dh"
 }
 
 input type:touchpad {
@@ -75,10 +83,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+b focus left
+bindsym $mod+n focus down
+bindsym $mod+p focus up
+bindsym $mod+f focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -105,7 +113,7 @@ bindsym $mod+Ctrl+h split h
 bindsym $mod+Ctrl+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+m fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
@@ -203,7 +211,7 @@ mode "$mode_system" {
 }
 
 bindsym $mod+r mode "resize"
-bindsym $mod+x mode "$mode_system"
+#bindsym $mod+x mode "$mode_system"
 
 bar {
         swaybar_command waybar
