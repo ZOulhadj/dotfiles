@@ -158,6 +158,8 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 #   Add the ``resume`` hook to ``/etc/mkinitcpio.conf`` like in the below example and regnerate initramfs like so ``sudo mkinitcpio -P``:
 #   HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block filesystems resume fsck)
 
+# Bugs
+
 # - Disable PSR (Panel Self Refresh)
 #   Add ``amdgpu.dcdebugmask=0x10`` to ``GRUB_CMDLINE_LINUX_DEFAULT`` in
 #   ``/etc/default/grub`` and then run ``sudo grub-mkconfig -o /boot/grub/grub.cfg`` to update grub.
@@ -167,5 +169,26 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 #   regression issue with kernel 5.19 [bug
 #   report](https://bugs.launchpad.net/ubuntu/+source/linux-hwe-5.19/+bug/2007718)
 
-#   My current kernel version is 6.7.4 so not sure if this has already been fixed
-#   but will need to test.
+#   ---- My current kernel version is 6.7.4 so not sure if this has already been fixed
+#   but will need to test. ----
+#
+#
+# This does not seem to have fixed the issue. I am getting regular crashing
+# issues which might be something to do with CPU voltages and scaling. There
+# seems to be a MCE error that I keep getting. Need to find a solution asap.
+# Below is typically the error I get when running ``journalctl -b``:
+#
+# Feb 22 06:49:34 arch kernel: mce: [Hardware Error]: Machine check events logged
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: Corrected error, no action required.
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: CPU:0 (19:44:1) MC0_STATUS[-|CE|MiscV|AddrV|-|-|SyndV|CECC|-|-|-]: 0x9c20400002000175
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: Error Addr: 0x000000010028d99c
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: IPID: 0x001000b000000000, Syndrome: 0x000000291a1f2601
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: Load Store Unit Ext. Error Code: 0, An ECC error was detected on a data cache read by a p>
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: cache level: L1, tx: DATA, mem-tx: EV
+# Feb 22 06:49:34 arch kernel: mce: [Hardware Error]: Machine check events logged
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: Corrected error, no action required.
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: CPU:1 (19:44:1) MC0_STATUS[Over|CE|MiscV|AddrV|-|-|SyndV|CECC|-|-|-]: 0xdc20400001010135
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: Error Addr: 0x000000016c71b55c
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: IPID: 0x001000b000000000, Syndrome: 0x000000291a1f1507
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: Load Store Unit Ext. Error Code: 1, An ECC error or L2 poison was detected on a data cach>
+# Feb 22 06:49:34 arch kernel: [Hardware Error]: cache level: L1, tx: DATA, mem-tx: DRD
