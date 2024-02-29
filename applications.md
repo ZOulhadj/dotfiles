@@ -20,12 +20,17 @@
 - imagemagick (Image to used by Emacs)
 - aspell
 - aspell-en (English Dictionary)
+- mu (Mail indexing and used by Emacs)
+- isync (Includes mbsync for syncing Email)
+- unzip (Required by nov Epub reader for Emacs)
+- memtest86+-efi (EFI-compatible memory tester)
 - zsh
 - zsh-syntax-highlighting
 - zsh-autosuggestions
 - base-devel (gcc, make)
 - htop
 - neofetch
+- cloc (Lines of code)
 - mako (Notifications)
 - man-db
 - man-pages
