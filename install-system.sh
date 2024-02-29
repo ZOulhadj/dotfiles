@@ -157,26 +157,14 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 # - Hibernation (Not complete)
 #   Add the ``resume`` hook to ``/etc/mkinitcpio.conf`` like in the below example and regnerate initramfs like so ``sudo mkinitcpio -P``:
 #   HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block filesystems resume fsck)
+# - Memtest86+-efi
+#   Once installed, the GRUB config needs to be recreated which will automatically detect it.
 
 # Bugs
-
-# - Disable PSR (Panel Self Refresh)
-#   Add ``amdgpu.dcdebugmask=0x10`` to ``GRUB_CMDLINE_LINUX_DEFAULT`` in
-#   ``/etc/default/grub`` and then run ``sudo grub-mkconfig -o /boot/grub/grub.cfg`` to update grub.
-
-#   **Reason**: My laptop is a Thinkpad T14s Gen 3 AMD which crashes after waking
-#   from sleep. This can be fixed by disabling PSR (Panel Self Refresh). This is a
-#   regression issue with kernel 5.19 [bug
-#   report](https://bugs.launchpad.net/ubuntu/+source/linux-hwe-5.19/+bug/2007718)
-
-#   ---- My current kernel version is 6.7.4 so not sure if this has already been fixed
-#   but will need to test. ----
-#
-#
-# This does not seem to have fixed the issue. I am getting regular crashing
+# I am getting regular crashing
 # issues which might be something to do with CPU voltages and scaling. There
 # seems to be a MCE error that I keep getting. Need to find a solution asap.
-# Below is typically the error I get when running ``journalctl -b``:
+# Below is typically the error I get when running ``journalctl``:
 #
 # Feb 22 06:49:34 arch kernel: mce: [Hardware Error]: Machine check events logged
 # Feb 22 06:49:34 arch kernel: [Hardware Error]: Corrected error, no action required.
