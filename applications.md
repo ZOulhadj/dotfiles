@@ -105,3 +105,4 @@
 - gnome-firmware (View and upgrade system firmware & has fwupd support built-in)
 - gimp (Image Manipulation)
 - minecraft-launcher
+- handbrake-full

@@ -238,7 +238,7 @@ assign [class="steam"] $ws5
 exec swaymsg "$w1; exec /usr/bin/firefox"
 exec swaymsg "$w2; exec /usr/bin/emacs"
 exec swaymsg "$w3; exec /usr/bin/kitty"
-exec swaymsg "$w4; exec /usr/bin/discord"
+exec swaymsg "$w4; exec /usr/bin/discord" # --start-minimized
 
 exec /usr/lib/xdg-desktop-portal -r
 
