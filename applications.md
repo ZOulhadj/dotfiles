@@ -99,6 +99,7 @@
 - qpwgraph (Qt Pipewire Visualiser)
 - mpv
 - nautilus (File Manager)
+- dolphine (File Manager)
 - synology drive
 - npm
 - systemdgenie (Systemd GUI Manager)
@@ -106,3 +107,4 @@
 - gimp (Image Manipulation)
 - minecraft-launcher
 - handbrake-full
+- renderdoc

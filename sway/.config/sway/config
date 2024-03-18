@@ -18,7 +18,7 @@ output $laptop {
 
 # Options
 font pango:Inconsolata Bold 12
-focus_follows_mouse yes
+focus_follows_mouse no
 mouse_warping output
 smart_borders on
 default_border pixel 3
@@ -239,6 +239,7 @@ exec swaymsg "$w1; exec /usr/bin/firefox"
 exec swaymsg "$w2; exec /usr/bin/emacs"
 exec swaymsg "$w3; exec /usr/bin/kitty"
 exec swaymsg "$w4; exec /usr/bin/discord" # --start-minimized
+exec swaymsg "exec /usr/bin/synology-drive"
 
 exec /usr/lib/xdg-desktop-portal -r
 
