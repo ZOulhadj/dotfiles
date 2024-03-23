@@ -75,7 +75,8 @@
         "spacing": 10
     },
     "clock": {
-        "format": "[{:%a %x %H:%M}]"
+        "format": "[{:%d/%m/%Y %H:%M}]",
+        "format-alt": "[{:%A %d %B %Y}]"
     },
     "cpu": {
         "format": "[CPU: {usage}%]",
@@ -166,4 +167,3 @@
         }
     },
 }
-
