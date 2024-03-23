@@ -13,7 +13,7 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 output $laptop {
-       scale 1.0
+       scale 1.2
 }
 
 # Options
