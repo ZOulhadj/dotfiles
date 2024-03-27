@@ -13,15 +13,15 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 output $laptop {
-       scale 1.2
+    scale 1.0
 }
 
 # Options
 font pango:Inconsolata Bold 12
 focus_follows_mouse no
 mouse_warping output
-smart_borders on
-default_border pixel 3
+#smart_borders on
+#default_border pixel 3
 workspace_auto_back_and_forth no
 output "*" bg wallpaper1.png fill
 focus_on_window_activation focus
