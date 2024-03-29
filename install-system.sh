@@ -159,6 +159,8 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 #   HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block filesystems resume fsck)
 # - Memtest86+-efi
 #   Once installed, the GRUB config needs to be recreated which will automatically detect it.
+# - Gnome Desktop
+#   Enable GDM service to automatically start on boot ``systemctl enable gdm.service``
 
 # Bugs
 # I am getting regular crashing

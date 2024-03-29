@@ -31,7 +31,6 @@
 - htop
 - neofetch
 - cloc (Lines of code)
-- mako (Notifications)
 - man-db
 - man-pages
 - texinfo
@@ -63,10 +62,6 @@
 - fwupd (Driver updating)
 - util-linux (fstrim SSD trimming)
 - alsa-utils
-
-- grim (Screenshot)
-- slurp (Selects a region in a Wayland compositor)
-- wl-clipboard (Wayland clipboard)
 - timeshift (Backups)
 
 ## applications
@@ -90,17 +85,14 @@
 - virtualbox-host-modules-arch (Kernel module required by virtualbox)
 - libreoffice
 - cpu-x
-- kitty (Terminal)
-- sway
-- swaylock
-- swayidle
-- swaybg
-- sway-auto-idle-inhibit
 - waybar
+
+- gnome
+- gnome-tweaks
+
 - qpwgraph (Qt Pipewire Visualiser)
 - mpv
 - nautilus (File Manager)
-- dolphine (File Manager)
 - synology drive
 - npm
 - systemdgenie (Systemd GUI Manager)
