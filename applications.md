@@ -34,7 +34,6 @@
 - man-db
 - man-pages
 - texinfo
-- xorg-xwayland
 - brightnessctl
 - playerctl
 - pavucontrol
@@ -50,11 +49,9 @@
 - noto-fonts-emoji
 - otf-font-awesome
 
-- qt6-wayland (OBS Screen recording support)
 - pipewire
 - pipewire-pulse (PulseAudio replacement)
 - xdg-desktop-portal
-- xdg-desktop-portal-wrl
 - xdg-user-dirs (Home folders)
 
 - cifs-utils (Samba)
@@ -68,7 +65,7 @@
 - firefox (Browser)
 - discord
 - teamviewer
-- emacs-wayland (Editor)
+- emacs (Editor)
 - neovim
 - visual-studio-code-bin
 - audacity
@@ -85,10 +82,11 @@
 - virtualbox-host-modules-arch (Kernel module required by virtualbox)
 - libreoffice
 - cpu-x
-- waybar
-
-- gnome
-- gnome-tweaks
+- xorg-server
+- xorg-xinit
+- i3
+- dmenu
+- picom (Compositor for i3)
 
 - qpwgraph (Qt Pipewire Visualiser)
 - mpv
@@ -96,7 +94,6 @@
 - synology drive
 - npm
 - systemdgenie (Systemd GUI Manager)
-- gnome-firmware (View and upgrade system firmware & has fwupd support built-in)
 - gimp (Image Manipulation)
 - minecraft-launcher
 - handbrake-full
