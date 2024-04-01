@@ -16,6 +16,7 @@
 - stow
 - git
 - gdb
+- openssh (ssh)
 - ripgrep
 - imagemagick (Image to used by Emacs)
 - aspell
@@ -52,6 +53,7 @@
 - pipewire
 - pipewire-pulse (PulseAudio replacement)
 - xdg-desktop-portal
+- xdg-desktop-portal-wlr (Screensharing on wayland)
 - xdg-user-dirs (Home folders)
 
 - cifs-utils (Samba)
@@ -65,7 +67,7 @@
 - firefox (Browser)
 - discord
 - teamviewer
-- emacs (Editor)
+- emacs-wayland (Editor)
 - neovim
 - visual-studio-code-bin
 - audacity
@@ -82,11 +84,14 @@
 - virtualbox-host-modules-arch (Kernel module required by virtualbox)
 - libreoffice
 - cpu-x
-- xorg-server
-- xorg-xinit
-- i3
-- dmenu
-- picom (Compositor for i3)
+- sway
+- swaybg
+- swayidle
+- swaylock
+- i3status
+- wmenu
+- xorg-xwayland
+
 
 - qpwgraph (Qt Pipewire Visualiser)
 - mpv

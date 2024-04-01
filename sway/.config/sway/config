@@ -1,21 +1,51 @@
+include /etc/sway/config.d/*
+
 # Variables
 set $mod Mod4
 set $term alacritty
-set $menu --no-startup-id dmenu_run
+set $menu dmenu_path | wmenu | xargs swaymsg exec --
+set $lock swaylock -f -c 000000
 
-# Set keyboard layout
-setxkbmap gb -option "ctrl:swapcaps"
+# Monitor setup
+set $laptop eDP-1
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
 
 # Options
-font pango:Inconsolata Bold 12
+font pango:Cascadia Mono Bold 10
 focus_follows_mouse no
 mouse_warping output
-#smart_borders on
-#default_border pixel 3
+focus_on_window_activation urgent
 workspace_auto_back_and_forth no
-#output "*" bg wallpaper1.png fill
-focus_on_window_activation focus
+smart_borders on
+#default_border pixel 3
 #gaps inner 8
+output "*" bg wallpaper1.png fill
+
+input type:keyboard {
+       xkb_layout "gb"
+       xkb_options ctrl:swapcaps
+       #xkb_variant "colemak_dh"
+}
+
+# Keyboard and Mouse
+input "1:1:AT_Translated_Set_2_keyboard" {
+        xkb_layout "gb"
+        xkb_options ctrl:swapcaps
+        #xkb_variant "colemak_dh"
+}
+
+input "10730:258:Kinesis_Advantage2_Keyboard" {
+        xkb_layout "gb"
+        #xkb_options ctrl:swapcaps
+        #xkb_variant "colemak_dh"
+}
+
+input type:touchpad {
+        natural_scroll enabled
+        scroll_factor 0.25
+        dwt disabled
+}
 
 # Multimedia keys
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -137,7 +167,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "swaynag -t warning -m 'Do you really want to exit?' -B 'Yes, exit' 'sway exit'"
 
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
@@ -177,11 +207,11 @@ bindsym $mod+r mode "resize"
 #bindsym $mod+x mode "$mode_system"
 
 bar {
-        status_command i3status
+    status_command i3status
 }
 
 # Any application using xwayland should say so in the title
-#for_window [shell="xwayland"] title_format "[XWayland] %title"
+for_window [shell="xwayland"] title_format "[XWayland] %title"
 
 # Applications should open to specific workspaces
 # class = x11 and app_id = wayland
@@ -202,11 +232,11 @@ bar {
 exec /usr/lib/xdg-desktop-portal -r
 
 # locking
-# exec swayidle -w \
-#         timeout 300 $lock \
-#         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#         before-sleep 'playerctl pause' \
-#         before-sleep $lock
+exec swayidle -w \
+        timeout 300 $lock \
+        timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+        before-sleep 'playerctl pause' \
+        before-sleep $lock
 
 # Enables inhibit_idle when playing audio
 #exec sway-audio-idle-inhibit
