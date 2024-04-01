@@ -55,6 +55,11 @@
 - xdg-desktop-portal
 - xdg-desktop-portal-wlr (Screensharing on wayland)
 - xdg-user-dirs (Home folders)
+- wl-clipboard
+- xorg-xwayland
+- grim (Screenshot)
+- slurp (Region selection for grim)
+- jq (Gets current sway output window for screenshot)
 
 - cifs-utils (Samba)
 - gvfs-smb (Samba)
@@ -90,7 +95,6 @@
 - swaylock
 - i3status
 - wmenu
-- xorg-xwayland
 
 
 - qpwgraph (Qt Pipewire Visualiser)
