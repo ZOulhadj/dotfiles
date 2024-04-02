@@ -45,6 +45,8 @@
 - ttf-ubuntu-font-family
 - ttf-hack
 - ttf-inconsolata
+- ttf-comic-mono-git
+- ttf-vista-fonts
 - noto-fonts
 - noto-fonts-ckj
 - noto-fonts-emoji
