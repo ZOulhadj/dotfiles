@@ -207,6 +207,10 @@ bindsym $mod+r mode "resize"
 #bindsym $mod+x mode "$mode_system"
 
 bar {
+    # Stop vertical mouse scrolling from changing current workspace
+    bindsym button4 nop
+    bindsym button5 nop
+
     status_command i3status
 }
 
