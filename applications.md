@@ -40,6 +40,7 @@
 - pavucontrol
 - yay (AUR Helper)
 - tlp (Battery care)
+- gammastep (Screen Dimmer for night)
 
 - ttf-cascadia-code
 - ttf-ubuntu-font-family
