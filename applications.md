@@ -40,6 +40,7 @@
 - pavucontrol
 - yay (AUR Helper)
 - tlp (Battery care)
+- tree (Tree style directory visualizer)
 - gammastep (Screen Dimmer for night)
 
 - ttf-cascadia-code
