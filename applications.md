@@ -43,6 +43,11 @@
 - tree (Tree style directory visualizer)
 - gammastep (Screen Dimmer for night)
 
+- acpi (Battery statistics for i3blocks)
+- sysstat (Includes mpstat for CPU usage for i3blocks)
+- lm_sensors (For CPU temperature for i3blocks)
+- kernel-module-hook ()
+
 - ttf-cascadia-code
 - ttf-ubuntu-font-family
 - ttf-hack
@@ -97,7 +102,7 @@
 - swaybg
 - swayidle
 - swaylock
-- i3status
+- i3blocks
 - wmenu
 
 

@@ -24,7 +24,7 @@ output "*" bg wallpaper1.png fill
 
 input type:keyboard {
        xkb_layout "gb"
-       xkb_options ctrl:swapcaps
+       #xkb_options ctrl:swapcaps
        #xkb_variant "colemak_dh"
 }
 
@@ -211,7 +211,7 @@ bar {
     bindsym button4 nop
     bindsym button5 nop
 
-    status_command i3status
+    status_command i3blocks -c ~/.config/i3blocks/config
 }
 
 # Any application using xwayland should say so in the title
@@ -245,5 +245,6 @@ exec swayidle -w \
 bindsym $mod+s exec grim -g "$(slurp)" - | tee $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png') | wl-copy
 bindsym Print  exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | tee $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png') | wl-copy
 
+# @TODO: Toggle gammastep with $mod+g
 exec_always gammastep
 exec /usr/lib/xdg-desktop-portal -r
