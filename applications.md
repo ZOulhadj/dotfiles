@@ -47,6 +47,7 @@
 - sysstat (Includes mpstat for CPU usage for i3blocks)
 - lm_sensors (For CPU temperature for i3blocks)
 - pacman-contrib (Additional applications and scripts for pacman)
+- reflector (Grab the latest pacman mirrors)
 
 - ttf-cascadia-code
 - ttf-ubuntu-font-family
