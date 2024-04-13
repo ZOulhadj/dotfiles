@@ -159,8 +159,8 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 #   HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block filesystems resume fsck)
 # - Memtest86+-efi
 #   Once installed, the GRUB config needs to be recreated which will automatically detect it.
-# - Linux modules hook
-#   Enable linux-modules-cleanup service
+# - Pacman-contrib
+#   Enable and start paccache.timer to automatically cleanup old packages weekly.
 
 # Bugs
 # I am getting regular crashing

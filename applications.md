@@ -46,7 +46,7 @@
 - acpi (Battery statistics for i3blocks)
 - sysstat (Includes mpstat for CPU usage for i3blocks)
 - lm_sensors (For CPU temperature for i3blocks)
-- kernel-module-hook ()
+- pacman-contrib (Additional applications and scripts for pacman)
 
 - ttf-cascadia-code
 - ttf-ubuntu-font-family
