@@ -3,8 +3,7 @@ include /etc/sway/config.d/*
 # Variables
 set $mod Mod4
 set $term alacritty
-set $menu dmenu_path | wmenu -f "Cascadia Mono 12" -p "Search" -b | xargs swaymsg exec --
-set $lock swaylock -f -c 000000
+set $menu dmenu_path | wmenu -f "Cascadia Mono 12" -p "Search" | xargs swaymsg exec --
 
 # Monitor setup
 set $laptop eDP-1
@@ -24,7 +23,7 @@ output "*" bg wallpaper1.png fill
 
 input type:keyboard {
        xkb_layout "gb"
-       #xkb_options ctrl:swapcaps
+       xkb_options ctrl:swapcaps
        #xkb_variant "colemak_dh"
 }
 
@@ -88,10 +87,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Control+b move left
+bindsym $mod+Control+n move down
+bindsym $mod+Control+p move up
+bindsym $mod+Control+f move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -204,10 +203,11 @@ mode "$mode_system" {
 }
 
 bindsym $mod+r mode "resize"
-#bindsym $mod+x mode "$mode_system"
+bindsym $mod+x mode "$mode_system"
 
 bar {
-    # Stop vertical mouse scrolling from changing current workspace
+    # Stop vertical mouse scrolling from changing current workspace while the
+    # mouse is hovered over the status bar.
     bindsym button4 nop
     bindsym button5 nop
 
@@ -225,26 +225,23 @@ for_window [shell="xwayland"] title_format "[XWayland] %title"
 #assign [class="discord" instance="discord"] $ws4
 #assign [class="steam"] $ws5
 
-# Auto launch applications
-# TODO: How to switch back to the first workspace without applications taking focus?
-#exec swaymsg "$w1; exec /usr/bin/firefox"
-#exec swaymsg "$w2; exec /usr/bin/emacs"
-#exec swaymsg "$w3; exec /usr/bin/kitty"
-#exec swaymsg "$w4; exec /usr/bin/discord" # --start-minimized
-#exec swaymsg "exec /usr/bin/synology-drive"
-
-exec /usr/lib/xdg-desktop-portal -r
-
 # locking
 exec swayidle -w \
-        timeout 300 $lock \
-        timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-        before-sleep 'playerctl pause' \
-        before-sleep $lock
+        timeout 600 'swaylock -f -c 000000' \
+        timeout 1800 'swaymsg "output * power off"' \
+        resume 'swaymsg "output * power on"'
+        #before-sleep 'swaylock -f -c 000000'
+        #before-sleep 'playerctl pause' \
+
+
+bindsym $mod+Shift+Alt+l exec swaylock -f -c 000000
 
 bindsym $mod+s exec grim -g "$(slurp)" - | tee $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png') | wl-copy
 bindsym Print  exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | tee $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png') | wl-copy
 
-# @TODO: Toggle gammastep with $mod+g
-#exec_always gammastep
+bindsym $mod+g exec gammastep
+
 exec /usr/lib/xdg-desktop-portal -r
+exec /usr/bin/mako
+exec /usr/bin/discord --start-minimized
+exec /usr/bin/synology-drive
