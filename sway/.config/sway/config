@@ -23,7 +23,7 @@ output "*" bg wallpaper1.png fill
 
 input type:keyboard {
        xkb_layout "gb"
-       xkb_options ctrl:swapcaps
+       #xkb_options ctrl:swapcaps
        #xkb_variant "colemak_dh"
 }
 

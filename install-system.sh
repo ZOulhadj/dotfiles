@@ -161,6 +161,9 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 #   Once installed, the GRUB config needs to be recreated which will automatically detect it.
 # - Pacman-contrib
 #   Enable and start paccache.timer to automatically cleanup old packages weekly.
+# - smb (Samba)
+#   Install cifs-utils and gvfs-smb (for gnome files).
+
 
 # Bugs
 # I am getting regular crashing
