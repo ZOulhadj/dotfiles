@@ -160,6 +160,8 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 #   Enable and start paccache.timer to automatically cleanup old packages weekly.
 # - smb (Samba)
 #   Install cifs-utils and gvfs-smb (for gnome files).
+# - Reflector (Pacman autosort mirrorlist)
+#   Enable/Start reflector.timer service to automatically run on a weekly basis
 
 
 # Bugs
