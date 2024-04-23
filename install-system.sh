@@ -154,9 +154,6 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 # - Install CPU microcode ``pacman -S amd-ucode``
 #   Installing this package should automatically call grub-mkconfig so that the
 #   microcode gets loaded at boot.
-# - Hibernation (Not complete)
-#   Add the ``resume`` hook to ``/etc/mkinitcpio.conf`` like in the below example and regnerate initramfs like so ``sudo mkinitcpio -P``:
-#   HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block filesystems resume fsck)
 # - Memtest86+-efi
 #   Once installed, the GRUB config needs to be recreated which will automatically detect it.
 # - Pacman-contrib
