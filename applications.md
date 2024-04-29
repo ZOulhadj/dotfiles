@@ -21,6 +21,8 @@
 - imagemagick (Image to used by Emacs)
 - aspell
 - aspell-en (English Dictionary)
+- hunspell ()
+- hunspell-en_gb (English Dictionary required by LibreOffice)
 - mu (Mail indexing and used by Emacs)
 - isync (Includes mbsync for syncing Email)
 - unzip (Required by nov Epub reader for Emacs)
@@ -56,6 +58,7 @@
 - ttf-inconsolata
 - ttf-comic-mono-git
 - ttf-vista-fonts
+- ttf-liberation
 - noto-fonts
 - noto-fonts-ckj
 - noto-fonts-emoji

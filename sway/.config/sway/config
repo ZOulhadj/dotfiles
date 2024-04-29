@@ -21,6 +21,8 @@ smart_borders on
 #gaps inner 8
 output "*" bg wallpaper1.png fill
 
+for_window [urgent="latest"] focus
+
 input type:keyboard {
        xkb_layout "gb"
        xkb_options ctrl:swapcaps
