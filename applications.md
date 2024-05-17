@@ -45,6 +45,8 @@
 - tree (Tree style directory visualizer)
 - gammastep (Screen Dimmer for night)
 - mako (Notifications Daemon)
+- cmake
+- yt-dlp (YouTube downloader)
 
 - acpi (Battery statistics for i3blocks)
 - sysstat (Includes mpstat for CPU usage for i3blocks)
@@ -109,7 +111,7 @@
 - swaylock
 - i3blocks
 - wmenu
-
+- krita (Painting)
 
 - qpwgraph (Qt Pipewire Visualiser)
 - mpv
