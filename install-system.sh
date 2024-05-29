@@ -162,6 +162,8 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 #   Install cifs-utils and gvfs-smb (for gnome files).
 # - Reflector (Pacman autosort mirrorlist)
 #   Enable/Start reflector.timer service to automatically run on a weekly basis
+# - Bluetooth
+#   Ensure btusb kernel module is loaded and enable/start bluetooth.service
 
 
 # Bugs

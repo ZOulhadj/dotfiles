@@ -47,6 +47,10 @@
 - mako (Notifications Daemon)
 - cmake
 - yt-dlp (YouTube downloader)
+- bluez
+- bluez-utils
+- zig
+- zls (Zig language server)
 
 - acpi (Battery statistics for i3blocks)
 - sysstat (Includes mpstat for CPU usage for i3blocks)
