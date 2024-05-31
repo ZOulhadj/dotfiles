@@ -11,7 +11,7 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 # Options
-font pango:Cascadia Mono Bold 10
+font pango:Inconsolata 14
 focus_follows_mouse no
 mouse_warping output
 focus_on_window_activation urgent

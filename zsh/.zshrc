@@ -28,7 +28,7 @@ promptinit
 
 PS1='%n@%m %~$ '
 
-alias ls="ls -alhG --color=auto"
+alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
 # Load zsh plugins
