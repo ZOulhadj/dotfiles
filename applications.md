@@ -65,6 +65,8 @@
 - ttf-comic-mono-git
 - ttf-vista-fonts
 - ttf-liberation
+- tex-gyre-fonts
+- otf-libertinus
 - noto-fonts
 - noto-fonts-ckj
 - noto-fonts-emoji
