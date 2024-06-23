@@ -3,7 +3,7 @@ include /etc/sway/config.d/*
 # Variables
 set $mod Mod4
 set $term alacritty
-set $menu dmenu_path | wmenu -f "Cascadia Mono 12" -p "Search" | xargs swaymsg exec --
+set $menu dmenu_path | wmenu -f "DejaVu Sans Mono 10" -p "Search" | xargs swaymsg exec --
 
 # Monitor setup
 set $laptop eDP-1
@@ -11,7 +11,7 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 # Options
-font pango:Inconsolata 14
+font pango:DejaVu Sans Mono 10
 focus_follows_mouse yes
 mouse_warping output
 focus_on_window_activation focus
@@ -213,6 +213,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+x mode "$mode_system"
 
 bar {
+    position top
     # Stop vertical mouse scrolling from changing current workspace while the
     # mouse is hovered over the status bar.
     bindsym button4 nop
@@ -252,3 +253,7 @@ exec /usr/lib/xdg-desktop-portal -r
 exec /usr/bin/mako
 exec /usr/bin/discord --start-minimized
 exec /usr/bin/synology-drive
+
+
+# @TEMP
+for_window [class="Game"] floating enable

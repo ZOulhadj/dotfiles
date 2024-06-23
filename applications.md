@@ -129,3 +129,4 @@
 - minecraft-launcher
 - handbrake-full
 - renderdoc
+- ghidra (Decompiler and code analysis tool)
