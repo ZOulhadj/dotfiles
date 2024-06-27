@@ -15,6 +15,7 @@
 ## utilities
 - stow
 - git
+- git-lfs
 - gdb
 - openssh (ssh)
 - ripgrep
