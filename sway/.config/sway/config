@@ -47,6 +47,11 @@ input "10730:258:Kinesis_Advantage2_Keyboard" {
         #xkb_variant "colemak_dh"
 }
 
+input type:pointer {
+      accel_profile adaptive
+      pointer_accel -0.2
+}
+
 input type:touchpad {
         natural_scroll enabled
         scroll_factor 0.25
