@@ -66,7 +66,6 @@
 - ttf-comic-mono-git
 - ttf-vista-fonts
 - ttf-liberation
-- ttf-monaco
 - tex-gyre-fonts
 - otf-libertinus
 - noto-fonts
