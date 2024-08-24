@@ -52,6 +52,7 @@
 - bluez-utils
 - zig
 - zls (Zig language server)
+- ufw (Uncomplicated Firewall)
 
 - acpi (Battery statistics for i3blocks)
 - sysstat (Includes mpstat for CPU usage for i3blocks)
@@ -112,17 +113,10 @@
 - virtualbox-host-modules-arch (Kernel module required by virtualbox)
 - libreoffice
 - cpu-x
-- sway
-- swaybg
-- swayidle
-- swaylock
-- i3blocks
-- wmenu
 - krita (Painting)
 
 - qpwgraph (Qt Pipewire Visualiser)
 - mpv
-- nautilus (File Manager)
 - synology drive
 - npm
 - systemdgenie (Systemd GUI Manager)
