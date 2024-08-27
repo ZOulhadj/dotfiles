@@ -94,7 +94,6 @@
 - discord
 - teamviewer
 - emacs-wayland (Editor)
-- neovim
 - visual-studio-code-bin
 - audacity
 - vlc
