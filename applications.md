@@ -81,9 +81,6 @@
 - xdg-user-dirs (Home folders)
 - wl-clipboard
 - xorg-xwayland
-- grim (Screenshot)
-- slurp (Region selection for grim)
-- jq (Gets current sway output window for screenshot)
 
 - cifs-utils (Samba)
 - gvfs-smb (Samba)
