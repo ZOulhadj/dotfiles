@@ -140,6 +140,7 @@ read -p "Enter drive for installation: (e.g., /dev/sda): " drive
 # - start/enable Network Manager systemctl service
 # - Enable pacman multilib ``/etc/pacman.conf`` (32 bit application repository)
 # - Enable pacman terminal colors ``/etc/pacman.conf``
+# - Enable parallel downloads for pacman by uncommenting #ParallelDownloads in ``/etc/pacman.conf``
 # - Install utility packages [2](./applications.md#utilities)
 # - Obtain latest hardware drivers via fwupd
 # - Configure TLP config for battery thresholds ``/etc/tlp.conf``
