@@ -88,6 +88,7 @@
 - util-linux (fstrim SSD trimming)
 - alsa-utils
 - timeshift (Backups)
+- rclone (Backing up)
 
 ## applications
 - firefox (Browser)
