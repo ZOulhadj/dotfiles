@@ -1,3 +1,7 @@
+[window]
+opacity = 0.80
+blur = true
+
 [font]
         normal = { family = "Cascadia Mono", style = "Regular" }
         size = 12.0
