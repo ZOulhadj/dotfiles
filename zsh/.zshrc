@@ -29,7 +29,11 @@ promptinit
 PS1='%n@%m %~$ '
 
 alias ls="ls --color=auto"
+alias la="ls -lhaG"
 alias grep="grep --color=auto"
+alias diff="diff --color"
+
+
 
 # Load zsh plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

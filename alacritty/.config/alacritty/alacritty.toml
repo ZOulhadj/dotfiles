@@ -1,6 +1,6 @@
-[window]
-opacity = 0.80
-blur = true
+# [window]
+# opacity = 0.80
+# blur = true
 
 [font]
         normal = { family = "Cascadia Mono", style = "Regular" }
