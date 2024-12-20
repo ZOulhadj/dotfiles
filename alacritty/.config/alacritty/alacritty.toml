@@ -6,31 +6,61 @@
         normal = { family = "Cascadia Mono", style = "Regular" }
         size = 12.0
 
-# XTerm's default colors
+
+# Campbell (Windows 10 default)
 
 # Default colors
 [colors.primary]
-background = '#000000'
-foreground = '#ffffff'
+background = '#0c0c0c'
+foreground = '#cccccc'
 
 # Normal colors
 [colors.normal]
-black   = '#000000'
-red     = '#cd0000'
-green   = '#00cd00'
-yellow  = '#cdcd00'
-blue    = '#0000ee'
-magenta = '#cd00cd'
-cyan    = '#00cdcd'
-white   = '#e5e5e5'
+black      = '#0c0c0c'
+red        = '#c50f1f'
+green      = '#13a10e'
+yellow     = '#c19c00'
+blue       = '#0037da'
+magenta    = '#881798'
+cyan       = '#3a96dd'
+white      = '#cccccc'
 
 # Bright colors
 [colors.bright]
-black   = '#7f7f7f'
-red     = '#ff0000'
-green   = '#00ff00'
-yellow  = '#ffff00'
-blue    = '#5c5cff'
-magenta = '#ff00ff'
-cyan    = '#00ffff'
-white   = '#ffffff'
+black      = '#767676'
+red        = '#e74856'
+green      = '#16c60c'
+yellow     = '#f9f1a5'
+blue       = '#3b78ff'
+magenta    = '#b4009e'
+cyan       = '#61d6d6'
+white      = '#f2f2f2'
+
+# # XTerm's default colors
+
+# # Default colors
+# [colors.primary]
+# background = '#000000'
+# foreground = '#ffffff'
+
+# # Normal colors
+# [colors.normal]
+# black   = '#000000'
+# red     = '#cd0000'
+# green   = '#00cd00'
+# yellow  = '#cdcd00'
+# blue    = '#0000ee'
+# magenta = '#cd00cd'
+# cyan    = '#00cdcd'
+# white   = '#e5e5e5'
+
+# # Bright colors
+# [colors.bright]
+# black   = '#7f7f7f'
+# red     = '#ff0000'
+# green   = '#00ff00'
+# yellow  = '#ffff00'
+# blue    = '#5c5cff'
+# magenta = '#ff00ff'
+# cyan    = '#00ffff'
+# white   = '#ffffff'
