@@ -26,7 +26,8 @@ compinit
 autoload -Uz promptinit
 promptinit
 
-PS1='%n@%m %~$ '
+PS1='%~> '
+#PS1='%n@%m %~$ '
 
 alias ls="ls --color=auto"
 alias la="ls -lhaG"

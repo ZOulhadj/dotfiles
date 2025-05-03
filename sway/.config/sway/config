@@ -3,7 +3,8 @@ include /etc/sway/config.d/*
 # Variables
 set $mod Mod4
 set $term alacritty
-set $menu dmenu_path | wmenu -f "DejaVu Sans Mono 10" -p "Search" | xargs swaymsg exec --
+#set $menu dmenu_path | wmenu -f "DejaVu Sans Mono 10" -p "Search" | xargs swaymsg exec --
+set $menu wofi --show drun
 
 # Monitor setup
 set $laptop eDP-1
@@ -56,6 +57,9 @@ input type:touchpad {
         natural_scroll enabled
         scroll_factor 0.25
         dwt disabled
+        tap enabled
+        drag disabled
+        drag_lock disabled
 }
 
 # Multimedia keys
@@ -219,13 +223,21 @@ bindsym $mod+x mode "$mode_system"
 
 bar {
     position top
+    status_command while true; do date +"%a %Y-%m-%d %H:%M"; sleep 60; done
+    workspace_buttons yes
+
     # Stop vertical mouse scrolling from changing current workspace while the
     # mouse is hovered over the status bar.
     bindsym button4 nop
     bindsym button5 nop
 
-    status_command i3blocks -c ~/.config/i3blocks/config
+    colors {
+        background #222222
+        statusline #ffffff
+    }
 }
+
+
 
 # Any application using xwayland should say so in the title
 for_window [shell="xwayland"] title_format "[XWayland] %title"
