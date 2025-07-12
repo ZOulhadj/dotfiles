@@ -16,17 +16,17 @@ font pango:DejaVu Sans Mono 10
 focus_follows_mouse yes
 mouse_warping output
 focus_on_window_activation focus
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
 #smart_borders yes
 default_border pixel 1
 #default_border pixel 3
 #gaps inner 8
-output "*" bg wallpaper1.png fill
+output "*" bg wallpaper.jpg fill
 
 for_window [urgent="latest"] focus
 
 output $laptop {
-       scale 1.2
+       scale 1
 }
 
 input type:keyboard {
@@ -50,7 +50,7 @@ input "10730:258:Kinesis_Advantage2_Keyboard" {
 
 input type:pointer {
       accel_profile adaptive
-      pointer_accel -0.2
+      pointer_accel 0.0
 }
 
 input type:touchpad {
@@ -223,21 +223,9 @@ bindsym $mod+x mode "$mode_system"
 
 bar {
     position top
-    status_command while true; do date +"%a %Y-%m-%d %H:%M"; sleep 60; done
     workspace_buttons yes
-
-    # Stop vertical mouse scrolling from changing current workspace while the
-    # mouse is hovered over the status bar.
-    bindsym button4 nop
-    bindsym button5 nop
-
-    colors {
-        background #222222
-        statusline #ffffff
-    }
+    status_command i3blocks -c ~/.config/i3blocks/config
 }
-
-
 
 # Any application using xwayland should say so in the title
 for_window [shell="xwayland"] title_format "[XWayland] %title"
@@ -269,8 +257,6 @@ bindsym $mod+g exec gammastep
 exec /usr/lib/xdg-desktop-portal -r
 exec /usr/bin/mako
 exec /usr/bin/discord --start-minimized
-exec /usr/bin/synology-drive
-
 
 # @TEMP
 for_window [class="Game"] floating enable

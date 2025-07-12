@@ -29,13 +29,16 @@ promptinit
 PS1='%~> '
 #PS1='%n@%m %~$ '
 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
 alias ls="ls --color=auto"
 alias la="ls -lhaG"
 alias grep="grep --color=auto"
 alias diff="diff --color"
+alias e="emacsclient -nw"
 
-# Load zsh plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-#bindkey '^I' autosuggest-accept
+alias dev="cd ~/dev"
+alias game="cd ~/dev/game"
+alias diss="cd ~/hpc/dissertation"

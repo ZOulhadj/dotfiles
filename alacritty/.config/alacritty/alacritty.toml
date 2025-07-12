@@ -1,41 +1,17 @@
-# [window]
-# opacity = 0.80
-# blur = true
+[window]
+        opacity = 0.9
+        blur = true
 
 [font]
         normal = { family = "Cascadia Mono", style = "Regular" }
         size = 12.0
 
-# # Colors (Gruvbox dark)
+[keyboard]
+bindings = [
+         { key = "PageUp", mods = "none", action = "ScrollPageUp" },
+         { key = "PageDown", mods = "none", action = "ScrollPageDown" },
+]
 
-# # Default colors
-# [colors.primary]
-# # hard contrast background = = '#1d2021'
-# background = '#282828'
-# # soft contrast background = = '#32302f'
-# foreground = '#ebdbb2'
-
-# # Normal colors
-# [colors.normal]
-# black   = '#282828'
-# red     = '#cc241d'
-# green   = '#98971a'
-# yellow  = '#d79921'
-# blue    = '#458588'
-# magenta = '#b16286'
-# cyan    = '#689d6a'
-# white   = '#a89984'
-
-# # Bright colors
-# [colors.bright]
-# black   = '#928374'
-# red     = '#fb4934'
-# green   = '#b8bb26'
-# yellow  = '#fabd2f'
-# blue    = '#83a598'
-# magenta = '#d3869b'
-# cyan    = '#8ec07c'
-# white   = '#ebdbb2'
 
 
 # Campbell (Windows 10 default)
@@ -67,7 +43,7 @@ magenta    = '#b4009e'
 cyan       = '#61d6d6'
 white      = '#f2f2f2'
 
-# # XTerm's default colors
+# XTerm's default colors
 
 # # Default colors
 # [colors.primary]

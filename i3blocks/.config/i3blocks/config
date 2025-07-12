@@ -1,0 +1,7 @@
+[battery]
+command=acpi -b
+interval=30
+
+[time]
+command=date '+%a %Y-%m-%d %H:%M'
+interval=60
