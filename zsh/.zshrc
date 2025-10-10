@@ -40,5 +40,5 @@ alias diff="diff --color"
 alias e="emacsclient -nw"
 
 alias dev="cd ~/dev"
-alias game="cd ~/dev/game"
+alias game="cd ~/dev/engine"
 alias diss="cd ~/hpc/dissertation"
