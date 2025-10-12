@@ -2,6 +2,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+setopt autocd
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
@@ -15,10 +16,10 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 
-# Set Emacs style keybindings
 bindkey -e
 
 zstyle :compinstall filename '/home/zakariya/.zshrc'
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 
 autoload -Uz compinit
 compinit
@@ -29,8 +30,8 @@ promptinit
 PS1='%~> '
 #PS1='%n@%m %~$ '
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 alias ls="ls --color=auto"
@@ -38,7 +39,3 @@ alias la="ls -lhaG"
 alias grep="grep --color=auto"
 alias diff="diff --color"
 alias e="emacsclient -nw"
-
-alias dev="cd ~/dev"
-alias game="cd ~/dev/engine"
-alias diss="cd ~/hpc/dissertation"
