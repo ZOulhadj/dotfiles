@@ -5,4 +5,4 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 maximize = true
-theme = Gruvbox Dark Hard
+theme = light:iTerm2 Light Background,dark:iTerm2 Dark Background

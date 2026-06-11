@@ -39,3 +39,7 @@ alias la="ls -lhaG"
 alias grep="grep --color=auto"
 alias diff="diff --color"
 alias e="emacsclient -nw"
+
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
