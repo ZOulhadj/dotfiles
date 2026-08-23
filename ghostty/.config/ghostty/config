@@ -1,8 +1,8 @@
-font-family = Cascadia Mono
+font-family = Martian Mono Std Rg
 font-size = 16
 window-padding-x = 0
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
-maximize = true
+maximize = false
 theme = light:iTerm2 Light Background,dark:iTerm2 Dark Background
